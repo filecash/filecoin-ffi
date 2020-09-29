@@ -38,6 +38,10 @@ const (
 	FilRegisteredPoStProofStackedDrgWindow512MiBV1  FilRegisteredPoStProof = C.fil_RegisteredPoStProof_StackedDrgWindow512MiBV1
 	FilRegisteredPoStProofStackedDrgWindow32GiBV1   FilRegisteredPoStProof = C.fil_RegisteredPoStProof_StackedDrgWindow32GiBV1
 	FilRegisteredPoStProofStackedDrgWindow64GiBV1   FilRegisteredPoStProof = C.fil_RegisteredPoStProof_StackedDrgWindow64GiBV1
+	FilRegisteredPoStProofStackedDrgWindow4GiBV1    FilRegisteredPoStProof = C.fil_RegisteredPoStProof_StackedDrgWindow4GiBV1
+	FilRegisteredPoStProofStackedDrgWinning4GiBV1   FilRegisteredPoStProof = C.fil_RegisteredPoStProof_StackedDrgWinning4GiBV1
+	FilRegisteredPoStProofStackedDrgWindow16GiBV1   FilRegisteredPoStProof = C.fil_RegisteredPoStProof_StackedDrgWindow16GiBV1
+	FilRegisteredPoStProofStackedDrgWinning16GiBV1  FilRegisteredPoStProof = C.fil_RegisteredPoStProof_StackedDrgWinning16GiBV1
 )
 
 // FilRegisteredSealProof as declared in filecoin-ffi/filcrypto.h:52
@@ -50,4 +54,6 @@ const (
 	FilRegisteredSealProofStackedDrg512MiBV1 FilRegisteredSealProof = C.fil_RegisteredSealProof_StackedDrg512MiBV1
 	FilRegisteredSealProofStackedDrg32GiBV1  FilRegisteredSealProof = C.fil_RegisteredSealProof_StackedDrg32GiBV1
 	FilRegisteredSealProofStackedDrg64GiBV1  FilRegisteredSealProof = C.fil_RegisteredSealProof_StackedDrg64GiBV1
+	FilRegisteredSealProofStackedDrg4GiBV1   FilRegisteredSealProof = C.fil_RegisteredSealProof_StackedDrg4GiBV1
+	FilRegisteredSealProofStackedDrg16GiBV1  FilRegisteredSealProof = C.fil_RegisteredSealProof_StackedDrg16GiBV1
 )
