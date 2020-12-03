@@ -907,6 +907,14 @@ func fromFilRegisteredPoStProof(p generated.FilRegisteredPoStProof) (abi.Registe
 		return abi.RegisteredPoStProof_StackedDrgWindow32GiBV1, nil
 	case generated.FilRegisteredPoStProofStackedDrgWindow64GiBV1:
 		return abi.RegisteredPoStProof_StackedDrgWindow64GiBV1, nil
+	case generated.FilRegisteredPoStProofStackedDrgWindow4GiBV1:
+        	return abi.RegisteredPoStProof_StackedDrgWindow4GiBV1, nil
+	case generated.FilRegisteredPoStProofStackedDrgWinning4GiBV1:
+		return abi.RegisteredPoStProof_StackedDrgWinning4GiBV1, nil
+	case generated.FilRegisteredPoStProofStackedDrgWindow16GiBV1:
+        	return abi.RegisteredPoStProof_StackedDrgWindow16GiBV1, nil
+	case generated.FilRegisteredPoStProofStackedDrgWinning16GiBV1:
+        	return abi.RegisteredPoStProof_StackedDrgWinning16GiBV1, nil			
 	default:
 		return 0, errors.Errorf("no mapping to abi.RegisteredPoStProof value available for: %v", p)
 	}
@@ -934,6 +942,14 @@ func toFilRegisteredPoStProof(p abi.RegisteredPoStProof) (generated.FilRegistere
 		return generated.FilRegisteredPoStProofStackedDrgWindow32GiBV1, nil
 	case abi.RegisteredPoStProof_StackedDrgWindow64GiBV1:
 		return generated.FilRegisteredPoStProofStackedDrgWindow64GiBV1, nil
+	case abi.RegisteredPoStProof_StackedDrgWindow4GiBV1:
+        	return generated.FilRegisteredPoStProofStackedDrgWindow4GiBV1, nil
+	case abi.RegisteredPoStProof_StackedDrgWinning4GiBV1:
+        	return generated.FilRegisteredPoStProofStackedDrgWinning4GiBV1, nil
+	case abi.RegisteredPoStProof_StackedDrgWindow16GiBV1:
+        	return generated.FilRegisteredPoStProofStackedDrgWindow16GiBV1, nil
+	case abi.RegisteredPoStProof_StackedDrgWinning16GiBV1:
+        	return generated.FilRegisteredPoStProofStackedDrgWinning16GiBV1, nil
 	default:
 		return 0, errors.Errorf("no mapping to abi.RegisteredPoStProof value available for: %v", p)
 	}
@@ -951,6 +967,10 @@ func toFilRegisteredSealProof(p abi.RegisteredSealProof) (generated.FilRegistere
 		return generated.FilRegisteredSealProofStackedDrg32GiBV1, nil
 	case abi.RegisteredSealProof_StackedDrg64GiBV1:
 		return generated.FilRegisteredSealProofStackedDrg64GiBV1, nil
+	case abi.RegisteredSealProof_StackedDrg4GiBV1:
+		return generated.FilRegisteredSealProofStackedDrg4GiBV1, nil
+	case abi.RegisteredSealProof_StackedDrg16GiBV1:
+		return generated.FilRegisteredSealProofStackedDrg16GiBV1, nil
 	default:
 		return 0, errors.Errorf("no mapping to C.FFIRegisteredSealProof value available for: %v", p)
 	}
