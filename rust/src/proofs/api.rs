@@ -1605,11 +1605,15 @@ pub mod tests {
             fil_RegisteredSealProof::StackedDrg512MiBV1,
             fil_RegisteredSealProof::StackedDrg32GiBV1,
             fil_RegisteredSealProof::StackedDrg64GiBV1,
+            fil_RegisteredSealProof::StackedDrg4GiBV1,
+            fil_RegisteredSealProof::StackedDrg16GiBV1,
             fil_RegisteredSealProof::StackedDrg2KiBV1_1,
             fil_RegisteredSealProof::StackedDrg8MiBV1_1,
             fil_RegisteredSealProof::StackedDrg512MiBV1_1,
             fil_RegisteredSealProof::StackedDrg32GiBV1_1,
             fil_RegisteredSealProof::StackedDrg64GiBV1_1,
+            fil_RegisteredSealProof::StackedDrg4GiBV1_1,
+            fil_RegisteredSealProof::StackedDrg16GiBV1_1,
         ];
 
         let post_types = vec![
@@ -1618,11 +1622,16 @@ pub mod tests {
             fil_RegisteredPoStProof::StackedDrgWinning512MiBV1,
             fil_RegisteredPoStProof::StackedDrgWinning32GiBV1,
             fil_RegisteredPoStProof::StackedDrgWinning64GiBV1,
+            fil_RegisteredPoStProof::StackedDrgWinning4GiBV1,
+            fil_RegisteredPoStProof::StackedDrgWinning16GiBV1,
+
             fil_RegisteredPoStProof::StackedDrgWindow2KiBV1,
             fil_RegisteredPoStProof::StackedDrgWindow8MiBV1,
             fil_RegisteredPoStProof::StackedDrgWindow512MiBV1,
             fil_RegisteredPoStProof::StackedDrgWindow32GiBV1,
             fil_RegisteredPoStProof::StackedDrgWindow64GiBV1,
+            fil_RegisteredPoStProof::StackedDrgWindow4GiBV1,
+            fil_RegisteredPoStProof::StackedDrgWindow16GiBV1,
         ];
 
         let num_ops = (seal_types.len() + post_types.len()) * 6;

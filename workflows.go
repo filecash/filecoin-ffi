@@ -267,12 +267,16 @@ func WorkflowRegisteredSealProofFunctions(t TestHelper) {
 		abi.RegisteredSealProof_StackedDrg512MiBV1,
 		abi.RegisteredSealProof_StackedDrg32GiBV1,
 		abi.RegisteredSealProof_StackedDrg64GiBV1,
+		abi.RegisteredSealProof_StackedDrg4GiBV1,
+		abi.RegisteredSealProof_StackedDrg16GiBV1,
 
 		abi.RegisteredSealProof_StackedDrg2KiBV1_1,
 		abi.RegisteredSealProof_StackedDrg8MiBV1_1,
 		abi.RegisteredSealProof_StackedDrg512MiBV1_1,
 		abi.RegisteredSealProof_StackedDrg32GiBV1_1,
 		abi.RegisteredSealProof_StackedDrg64GiBV1_1,
+		abi.RegisteredSealProof_StackedDrg4GiBV1_1,
+		abi.RegisteredSealProof_StackedDrg16GiBV1_1,
 	}
 
 	for _, st := range sealTypes {
@@ -289,12 +293,16 @@ func WorkflowRegisteredPoStProofFunctions(t TestHelper) {
 		abi.RegisteredPoStProof_StackedDrgWinning512MiBV1,
 		abi.RegisteredPoStProof_StackedDrgWinning32GiBV1,
 		abi.RegisteredPoStProof_StackedDrgWinning64GiBV1,
+		abi.RegisteredPoStProof_StackedDrgWinning4GiBV1,
+		abi.RegisteredPoStProof_StackedDrgWinning16GiBV1,
 
 		abi.RegisteredPoStProof_StackedDrgWindow2KiBV1,
 		abi.RegisteredPoStProof_StackedDrgWindow8MiBV1,
 		abi.RegisteredPoStProof_StackedDrgWindow512MiBV1,
 		abi.RegisteredPoStProof_StackedDrgWindow32GiBV1,
 		abi.RegisteredPoStProof_StackedDrgWindow64GiBV1,
+		abi.RegisteredPoStProof_StackedDrgWindow4GiBV1,
+		abi.RegisteredPoStProof_StackedDrgWindow16GiBV1,
 	}
 
 	for _, pt := range postTypes {
