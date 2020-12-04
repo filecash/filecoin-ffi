@@ -92,7 +92,7 @@ impl From<RegisteredSealProof> for fil_RegisteredSealProof {
                 fil_RegisteredSealProof::StackedDrg64GiBV1_1
             }
             RegisteredSealProof::StackedDrg4GiBV1_1 => fil_RegisteredSealProof::StackedDrg4GiBV1_1,
-            RegisteredSealProof::StackedDrg16GiBV1)1 => fil_RegisteredSealProof::StackedDrg16GiBV1_1,
+            RegisteredSealProof::StackedDrg16GiBV1_1 => fil_RegisteredSealProof::StackedDrg16GiBV1_1,
         }
     }
 }

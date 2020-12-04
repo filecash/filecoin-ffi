@@ -15,3 +15,7 @@ require (
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
 	modernc.org/golex v1.0.1 // indirect
 )
+
+replace github.com/filecoin-project/specs-actors => ../specs-actors-v0.9.13
+
+replace github.com/filecoin-project/go-state-types => ../go-state-types

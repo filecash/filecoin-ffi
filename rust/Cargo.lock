@@ -132,8 +132,6 @@ checksum = "3441f0f7b02788e948e47f457ca01f1d7e6d92c693bc132c22b087d3141c03ff"
 [[package]]
 name = "bellperson"
 version = "0.12.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a22d2119d74de760a13d359d6a216c21405e9a5ece520dcd7457bbfae4512126"
 dependencies = [
  "ahash",
  "bit-vec",
@@ -939,8 +937,6 @@ dependencies = [
 [[package]]
 name = "filecoin-proofs"
 version = "5.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c49a59b1148dcdb4711bec11faa88f8b350a4edd8326d2bb7b2437c4a019fbec"
 dependencies = [
  "anyhow",
  "bellperson",
@@ -988,8 +984,6 @@ dependencies = [
 [[package]]
 name = "filecoin-proofs-api"
 version = "5.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b5cd67c8edf6905c6041ee733f2a7efe48394276f32a351f23bcb9f1453a33da"
 dependencies = [
  "anyhow",
  "bellperson",
@@ -1671,8 +1665,6 @@ dependencies = [
 [[package]]
 name = "neptune"
 version = "2.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "453fff5e63fb9155c6571ca4fe3d1799ae57a66d5c27346a201eafd8c655a09a"
 dependencies = [
  "bellperson",
  "blake2s_simd",
@@ -1972,8 +1964,6 @@ checksum = "d4fd5641d01c8f18a23da7b6fe29298ff4b55afcccdf78973b24cf3175fee32e"
 [[package]]
 name = "phase21"
 version = "0.11.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e2e4dd94fa82b154cb22a5d708d231592d1310da9402825d1e338aa5b6864d65"
 dependencies = [
  "bellperson",
  "blake2b_simd",
@@ -2569,15 +2559,14 @@ dependencies = [
 [[package]]
 name = "sha2raw"
 version = "2.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "57da614e847c49a01979ffa0d9a030d983c4bb6e78a13ff20203a0169deeff42"
 dependencies = [
- "block-buffer 0.7.3",
+ "block-buffer 0.9.0",
+ "byteorder 1.3.4",
  "cpuid-bool",
  "digest 0.9.0",
  "fake-simd",
  "lazy_static",
- "opaque-debug 0.2.3",
+ "opaque-debug 0.3.0",
  "sha2-asm",
 ]
 
@@ -2625,8 +2614,6 @@ checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 [[package]]
 name = "storage-proofs"
 version = "5.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "12e40112e2867c532f611c3fc4af826a6e9db2144e269fda545826375bafb084"
 dependencies = [
  "storage-proofs-core",
  "storage-proofs-porep",
@@ -2636,8 +2623,6 @@ dependencies = [
 [[package]]
 name = "storage-proofs-core"
 version = "5.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "191e0ad20e15d20dd2a173338816970d74654f0fd0ae89db188e9993760b98cb"
 dependencies = [
  "aes",
  "anyhow",
@@ -2672,8 +2657,6 @@ dependencies = [
 [[package]]
 name = "storage-proofs-porep"
 version = "5.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b20609e5bb968c708747c3922e6cd15661cb1515d5508bd96e0a4f1600acabe0"
 dependencies = [
  "anyhow",
  "bellperson",
@@ -2708,8 +2691,6 @@ dependencies = [
 [[package]]
 name = "storage-proofs-post"
 version = "5.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "48d3f62e46745d71c5359472a7f1017782eca46ea0c186dcb1a1cf5fad1e5c26"
 dependencies = [
  "anyhow",
  "bellperson",
