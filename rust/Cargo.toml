@@ -51,3 +51,6 @@ default = ["pairing"]
 pairing = ["filecoin-proofs-api/pairing", "bellperson/pairing"]
 blst = ["filecoin-proofs-api/blst", "bellperson/blst"]
 blst-portable = ["bls-signatures/blst-portable", "blstrs/portable"]
+
+[patch.crates-io]
+bellperson = { git = "https://github.com/filecoin-project/bellperson", branch = "deadlock-bug-vmx-2", default-features = false, features = ["gpu"] }
