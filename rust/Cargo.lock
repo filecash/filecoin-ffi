@@ -122,7 +122,7 @@ checksum = "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
 [[package]]
 name = "bellperson"
 version = "0.12.3"
-source = "git+https://github.com/filecoin-project/bellperson?branch=deadlock-bug-vmx-2#133dcbb649e900cb947126d642e68c26b7ae19e3"
+source = "git+https://github.com/filecoin-project/bellperson?branch=deadlock-bug-vmx-2#36ea3412829cafe2f77fa84e8b22a52828a66e12"
 dependencies = [
  "bit-vec",
  "blake2s_simd",
