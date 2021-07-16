@@ -683,6 +683,36 @@ func FilSealCommitPhase2(sealCommitPhase1OutputPtr []byte, sealCommitPhase1Outpu
 	return __v
 }
 
+// fic remotec2 FilSealCommitPhase2Local function as declared in filecoin-ffi/filcrypto.h:686
+func FilSealCommitPhase2Local(sealCommitPhase1OutputPtr []byte, sealCommitPhase1OutputLen uint, sectorId uint64, proverId Fil32ByteArray) *FilSealCommitPhase2Response {
+	csealCommitPhase1OutputPtr, csealCommitPhase1OutputPtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&sealCommitPhase1OutputPtr)))
+	csealCommitPhase1OutputLen, csealCommitPhase1OutputLenAllocMap := (C.size_t)(sealCommitPhase1OutputLen), cgoAllocsUnknown
+	csectorId, csectorIdAllocMap := (C.uint64_t)(sectorId), cgoAllocsUnknown
+	cproverId, cproverIdAllocMap := proverId.PassValue()
+	__ret := C.fil_seal_commit_phase2_local(csealCommitPhase1OutputPtr, csealCommitPhase1OutputLen, csectorId, cproverId)
+	runtime.KeepAlive(cproverIdAllocMap)
+	runtime.KeepAlive(csectorIdAllocMap)
+	runtime.KeepAlive(csealCommitPhase1OutputLenAllocMap)
+	runtime.KeepAlive(csealCommitPhase1OutputPtrAllocMap)
+	__v := NewFilSealCommitPhase2ResponseRef(unsafe.Pointer(__ret))
+	return __v
+}
+
+// fic remotec2 FilSealCommitPhase2Remote function as declared in filecoin-ffi/filcrypto.h:691
+func FilSealCommitPhase2Remote(sealCommitPhase1OutputPtr []byte, sealCommitPhase1OutputLen uint, sectorId uint64, proverId Fil32ByteArray) *FilSealCommitPhase2Response {
+	csealCommitPhase1OutputPtr, csealCommitPhase1OutputPtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&sealCommitPhase1OutputPtr)))
+	csealCommitPhase1OutputLen, csealCommitPhase1OutputLenAllocMap := (C.size_t)(sealCommitPhase1OutputLen), cgoAllocsUnknown
+	csectorId, csectorIdAllocMap := (C.uint64_t)(sectorId), cgoAllocsUnknown
+	cproverId, cproverIdAllocMap := proverId.PassValue()
+	__ret := C.fil_seal_commit_phase2_remote(csealCommitPhase1OutputPtr, csealCommitPhase1OutputLen, csectorId, cproverId)
+	runtime.KeepAlive(cproverIdAllocMap)
+	runtime.KeepAlive(csectorIdAllocMap)
+	runtime.KeepAlive(csealCommitPhase1OutputLenAllocMap)
+	runtime.KeepAlive(csealCommitPhase1OutputPtrAllocMap)
+	__v := NewFilSealCommitPhase2ResponseRef(unsafe.Pointer(__ret))
+	return __v
+}
+
 // FilSealPreCommitPhase1 function as declared in filecoin-ffi/filcrypto.h:690
 func FilSealPreCommitPhase1(registeredProof FilRegisteredSealProof, cacheDirPath string, stagedSectorPath string, sealedSectorPath string, sectorId uint64, proverId Fil32ByteArray, ticket Fil32ByteArray, piecesPtr []FilPublicPieceInfo, piecesLen uint) *FilSealPreCommitPhase1Response {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown

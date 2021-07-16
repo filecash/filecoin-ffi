@@ -406,6 +406,51 @@ func SealCommitPhase2(
 	return copyBytes(resp.ProofPtr, resp.ProofLen), nil
 }
 
+// fic remotec2 SealCommitPhase2Local
+func SealCommitPhase2Local(
+	phase1Output []byte,
+	sectorNum abi.SectorNumber,
+	minerID abi.ActorID,
+) ([]byte, error) {
+	proverID, err := toProverID(minerID)
+	if err != nil {
+		return nil, err
+	}
+	resp := generated.FilSealCommitPhase2Local(phase1Output, uint(len(phase1Output)), uint64(sectorNum), proverID)
+	resp.Deref()
+
+	defer generated.FilDestroySealCommitPhase2Response(resp)
+
+	if resp.StatusCode != generated.FCPResponseStatusFCPNoError {
+		return nil, errors.New(generated.RawString(resp.ErrorMsg).Copy())
+	}
+
+	return copyBytes(resp.ProofPtr, resp.ProofLen), nil
+}
+
+// fic remotec2 SealCommitPhase2Remote
+func SealCommitPhase2Remote(
+	phase1Output []byte,
+	sectorNum abi.SectorNumber,
+	minerID abi.ActorID,
+) ([]byte, error) {
+	proverID, err := toProverID(minerID)
+	if err != nil {
+		return nil, err
+	}
+
+	resp := generated.FilSealCommitPhase2Remote(phase1Output, uint(len(phase1Output)), uint64(sectorNum), proverID)
+	resp.Deref()
+
+	defer generated.FilDestroySealCommitPhase2Response(resp)
+
+	if resp.StatusCode != generated.FCPResponseStatusFCPNoError {
+		return nil, errors.New(generated.RawString(resp.ErrorMsg).Copy())
+	}
+
+	return copyBytes(resp.ProofPtr, resp.ProofLen), nil
+}
+
 // Unseal
 func Unseal(
 	proofType abi.RegisteredSealProof,
