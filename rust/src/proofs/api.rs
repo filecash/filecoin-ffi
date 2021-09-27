@@ -508,7 +508,7 @@ pub unsafe extern "C" fn fil_seal_commit_phase2_local(
             }
         }
 
-        info!("seal_commit_phase2_loacl: finish");
+        info!("seal_commit_phase2_local: finish");
 
         raw_ptr(response)
     })
